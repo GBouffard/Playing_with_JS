@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!-- The <!DOCTYPE> declaration must be the very first thing in your HTML document, before the <html> tag. The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.
+-->
+
+<html>
+<head>
+  <title>Boubou</title>
+
+<!-- <style> in the head: If the "scoped" attribute is not used, each <style> tag must be located in the head section.
+To link to an external style sheet, we can use the <link> tag.  -->
+
+  <style>
+    button {
+      color: red;
+      background: yellow
+    }
+  </style>
+
+<!--This is a comment. Comments are not displayed in the browser-->
+
+<!-- Scripts can be in head and body -->
+<!-- <script></script> -->
+<!-- <noscript> element is for users that have disabled scripts in their browser -->
+  
+</head>
+
+<body>
+
+<!--    <script type="text/javascript" src="001.js"></script> 
+cannot be here else it gives:
+Cannot read property 'addEventListener' of null 
+the order is important: the button needs to be there first. -->
+
+  <button class="guillaume_button"> Click me </button>
+
+<!-- script at the bottom - Safe place -->
+
+  <script type="text/javascript" src="001.js"></script>
+
+<!-- instead of a file reference, script could also be written in here.
+ If the "src" attribute is present, the <script> element must be empty, else it can be like
+
+<script>
+  var myButton = document.querySelector('.guillaume_button');
+
+  var doThis = function() {
+    console.log("I clicked you!");
+  };
+
+  myButton.addEventListener('click', doThis);
+</script>
+-->
+
+</body>
+</html>
+
+
+
