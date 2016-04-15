@@ -1,11 +1,10 @@
-001
+:basketball: 001
 ===
 
-- Add notes in HTML <!--   ... -->
-- <style> mostly in head
-- <script> in <head> and <body>
-- <script> positionning
-- Notion of <noscript>
+- Add notes in HTML
+- style TAG - mostly in head
+- script TAG - in head and body - positionning
+- noscript TAG
 
-002
+:basketball: 002
 ===
