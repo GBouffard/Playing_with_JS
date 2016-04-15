@@ -1,10 +1,8 @@
 var myButton = document.querySelector('.guillaume_button');
-// class and ids need to be given in querySelector with '.' or '#'
 
 var doThis = function() {
-  console.log("I clicked you!");
+  console.log("You clicked me!");
 };
 
 myButton.addEventListener('click', doThis);
-
 
