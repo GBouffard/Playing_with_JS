@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whatever</title>
+  <style>
+    button {
+      color: darkmagenta;
+      background-color: violet; 
+      font-weight: bold;
+      border: 3px solid mediumvioletred;
+    }
+
+    .mouse {
+      background-color: darkorange;
+      color: sienna;
+      border: 3px solid saddlebrown;
+      margin: 3px;
+    }
+
+    #windowButton {
+      background-color: springgreen;
+      color: seagreen;
+      border: 3px solid seagreen;
+    }
+  </style>
+</head>
+<body>
+  <button> CLICK </button>
+  <script>
+    var button1 = document.getElementsByTagName('button')[0];
+    button1.addEventListener('click', function() { console.log('you clicked!'); });
+  </script><BR><BR>
+
+  <button> CLICK RIGHT aka contextmenu </button>
+  <script>
+    var button2 = document.getElementsByTagName('button')[1];
+    button2.addEventListener('contextmenu', function() { console.log('you contextmenued!'); });
+  </script><BR><BR>
+
+  <button> DOUBLE CLICK </button>
+  <script>
+    var button3 = document.getElementsByTagName('button')[2];
+    button3.addEventListener('dblclick', function() { console.log('you double-clicked!'); });
+  </script><BR><BR>
+
+  <button> KEYBOARD EVENTS </button>
+  <script>
+    var button4 = document.getElementsByTagName('button')[3];
+    button4.addEventListener('keypress', function() { console.log('The key is down!'); });
+    button4.addEventListener('keyup', function() { console.log('The key is down!'); });
+  </script><BR><BR>
+
+  <button class="mouse">Mouse down</button>
+  <button class="mouse">Mouse up</button>
+  <button class="mouse">Mouse enter</button>
+  <button class="mouse">Mouse leave</button>
+  <button class="mouse">Mouse move</button>
+  <button class="mouse">Mouse out</button>
+  <button class="mouse">Mouse over</button>
+  <script>
+    var button5 = document.getElementsByTagName('button')[4];
+    button5.addEventListener('mousedown', function() { console.log('The mouse is down!'); });
+    var button6 = document.getElementsByTagName('button')[5];
+    button6.addEventListener('mouseup', function() { console.log('The mouse is up!'); });
+    var button7 = document.getElementsByTagName('button')[6];
+    button7.addEventListener('mouseenter', function() { console.log('The mouse enterred!'); });
+    var button8 = document.getElementsByTagName('button')[7];
+    button8.addEventListener('mouseleave', function() { console.log('The mouse left!'); });
+    var button9 = document.getElementsByTagName('button')[8];
+    button9.addEventListener('mousemove', function() { console.log('The mouse moved!'); });
+    var button10 = document.getElementsByTagName('button')[9];
+    button10.addEventListener('mouseout', function() { console.log('The mouse is out!'); });
+    var button11 = document.getElementsByTagName('button')[10];
+    button11.addEventListener('mouseover', function() { console.log('The mouse is over!'); });
+  </script><BR><BR>
+
+  <button id="windowButton"> WINDOW EVENTS - ONLINE / OFFLINE / RESIZE</button>
+  <script>
+    window.addEventListener('offline', function() { console.log('browser is offline!'); });
+    window.addEventListener('online', function() { console.log('browser is online!'); });
+    window.addEventListener('resize', function() { console.log('browser has been resized'); });
+  </script><BR><BR>
+
+  <input></input>
+  <script>
+    var input1 = document.getElementsByTagName('input')[0];
+    input1.addEventListener('change', function() { console.log('you typed something!'); });
+  </script><BR><BR>
+
+  <input></input>
+  <script>
+    var input2 = document.getElementsByTagName('input')[1];
+    input2.addEventListener('input', function() { console.log('you are typing!'); });
+  </script><BR><BR>
+</body>
+</html>
