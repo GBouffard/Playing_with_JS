@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yo</title>
+  <style>
+    button {
+      font-weight: bold;
+    }
+    div {
+      font-family: arial;
+      font-size: 12px;
+      font-style: italic;
+    }
+    .chuckButton {
+      color: firebrick;
+      background-color: gold;
+    }
+    .grootButton {
+      color:royalblue;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="doThis()" class="chuckButton">THE CHUCK BUTTON</button>
+  <button class="grootButton">YOU GROOT?</button>
+  <div id="myDiv"></div>
+  <script type="text/javascript" src="004.js"></script>
+  <script>
+    function doThis() {
+      var resultOfConfirm = confirm('Do you want to see Chuck Norris?');
+      document.getElementById("myDiv").innerHTML =
+      resultOfConfirm ? '<img src="http://memesvault.com/wp-content/uploads/Chuck-Norris-Thumbs-Up-Meme-08.jpg">' :
+      'Aww! You made Chuck cry!';
+    }
+  </script>
+</body>
+</html>
