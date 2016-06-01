@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery - Handling Events</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <style>
+    button {
+      color: lightskyblue;
+      background-color: dodgerblue;
+      font-family: arial;
+      font-size: 20px;
+      border: 4px solid mediumblue;
+      margin:4px;
+    }
+
+    #hiddenAtFirst {
+      color: darkred;
+      background-color: tomato;
+      border-color: firebrick;
+    }
+  </style>
+</head>
+<body>
+  <button id='alertButton'>What is THIS?</button><br>
+  <button id='disappearingButton'>I can disappear</button>
+  <button id='hiddenAtFirst'>And I can make it appear</button><br>
+  <script>
+    $(document).ready(function() {
+      console.log('THE DOM IS LOADED!');
+      $('#hiddenAtFirst').hide();
+    });
+
+    $('#alertButton').click(function() {
+      alert($(this).text());
+    });
+
+    $('#disappearingButton').click(function() {
+      $('#disappearingButton').hide();
+      $('#hiddenAtFirst').show();
+    });
+
+    $('#hiddenAtFirst').click(function() {
+      $('#disappearingButton').show();
+      $('#hiddenAtFirst').hide();
+    });
+  </script>
+</body>
+</html>
